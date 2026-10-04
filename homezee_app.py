@@ -156,4 +156,4 @@ if __name__=='__main__':
  except (OSError,ValueError,KeyError):pass
  threading.Thread(target=maintain,daemon=True).start()
  print('Homezee: http://localhost:8080 — abre este endereço no browser',flush=True)
- ThreadingHTTPServer(('127.0.0.1',int(os.environ.get('PORT','8080'))),Handler).serve_forever()
+ ThreadingHTTPServer(('0.0.0.0',int(os.environ.get('PORT','8080'))),Handler).serve_forever()
